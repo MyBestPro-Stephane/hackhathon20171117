@@ -26,7 +26,7 @@
                 <li><a href="#" class="username"></a></li>
                 <li><a href="#">Mes commandes</a></li>
                 <li><a href="index.html">Les paniers</a></li>
-                <li><a href="#">Deconnexion</a></li>
+                <li><a href="javascript:sessionStorage.removeItem('_login');sessionStorage.removeItem('_password');window.location.href='/';">Deconnexion</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div><!--/.container-fluid -->
@@ -66,6 +66,15 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <script>
+    $(document).ready(function() {
+        var login = sessionStorage.getItem('_login');
+        var password = sessionStorage.getItem('_password');
+
+        if(login != null > 0 && password != null) {
+            window.location.href='index.html';
+        }
+    });
+
     function storeRegistration()
     {
         var field = new Array('nom', 'prenom', 'birthDate', 'login', 'password');
