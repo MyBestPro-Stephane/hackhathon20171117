@@ -1,0 +1,49 @@
+ul li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a{color: black;}
+
+.card{
+    width: 100%;
+    /*height: 100px;*/
+    background-color: grey;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+
+.card .leftPart{
+}
+
+.card .rightPart{
+    position: relative;
+    padding: 10px;
+}
+
+.card .product_image{
+    width: 100px;
+    height: 100px;
+    background-image: url("../images/panier-legumes.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #FFF;
+}
+
+.card .fa-angle-right{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+}
+
+.card .distance{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
