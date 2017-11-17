@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+   #map {
+    height: 800px;
+    width: 50%;
+   }
+</style>
 </head>
 <body>
 
@@ -32,38 +38,47 @@
     </div><!--/.container-fluid -->
 </nav>
 
-
-
-<div class="container">
-    <form method="post"  enctype="multipart/form-data">
-        <div class="form-group">
-            <label for="nom">Nom</label>
-            <input type="text" id="nom" name="nom" placeholder="Nom" class="form-control">
-        </div>
-        <div class="form-group">
-            <label for="prenom">Prénom</label>
-            <input type="text" id="prenom" name="prenom" placeholder="Prénom" class="form-control">
-        </div>
-        <div class="form-group">
-            <label for="birthDate">Date de naissance</label>
-            <input type="date" id="birthDate" name="birthDate" placeholder="Date de naissance" class="form-control">
-        </div>
-        <div class="form-group">
-            <label for="login">Login</label>
-            <input type="text" id="login" name="login" placeholder="Login" class="form-control">
-        </div>
-        <div class="form-group">
-            <label for="password">Mot de passe</label>
-            <input type="password" id="password" name="password" placeholder="Mot de passe" class="form-control">
-        </div>
-        <button type="submit" class="btn btn-default">Confirmer</button>
-    </form>
-</div>
-
-
+<h3>My Google Maps Demo</h3>
+<div id="map"></div>
+<script>
+  function initMap() {
+    var uluru = {lat: 48.8779185, lng:2.3516669000000547};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 13,
+      center: uluru
+    });
+    var marker = new google.maps.Marker({
+      position: {lat: 48.8483899, lng:2.3959213000000545},
+      map: map,
+      icon: 'images/logo-gmap.png'
+    });
+    var marker1 = new google.maps.Marker({
+      position: uluru,
+      map: map,
+      icon: 'images/logo-gmap.png'
+    });
+    var marker2 = new google.maps.Marker({
+          position: {lat: 48.8514479, lng:2.3004584999999906},
+          map: map,
+          icon: "images/logo-gmap.png"
+        });
+    var marker3 = new google.maps.Marker({
+      position: {lat: 48.8710678, lng:2.3847051000000192},
+      map: map,
+      icon: "images/logo-gmap.png"
+    });
+    var marker4 = new google.maps.Marker({
+      position: {lat: 48.8841232, lng:2.33225189999996},
+      map: map,
+      icon: "images/logo-gmap.png"
+    });
+  }
+</script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLwFIPPFsPB6xpFqUf5cfx8yckTvTdpc4&callback=initMap">
+</script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
-
