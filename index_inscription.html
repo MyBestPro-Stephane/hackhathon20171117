@@ -69,20 +69,27 @@
     function storeRegistration()
     {
         var field = new Array('nom', 'prenom', 'birthDate', 'login', 'password');
+        var hasError = false;
 
         $.each(field, function(i, val) {
             $("#"+val).closest('.form-group').removeClass('has-error');
             sessionStorage.removeItem('_'+val);
+            hasError = false;
 
             var value = $("#"+val).val();
 
             if(value.length == 0) {
                 $("#"+val).closest('.form-group').addClass('has-error');
+                hasError = true;
                 return true;
             }
 
             sessionStorage.setItem('_'+val, value);
         });
+
+        if(!hasError) {
+            window.location.href='index.html';
+        }
     }
 </script>
 </body>

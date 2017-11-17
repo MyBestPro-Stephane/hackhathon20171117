@@ -24,6 +24,7 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    <li><a href="#" class="username"></a></li>
                     <li><a href="#">Item 1</a></li>
                     <li><a href="#">Item 2</a></li>
                     <li><a href="#">Item 3</a></li>
@@ -33,6 +34,11 @@
     </nav>
 
     <div class="container">
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <span>Faites votre choix de panier </span><span class="username"></span>
+            </div>
+        </div>
         <a href="panier.html">
             <div class="card">
                 <div class="leftPart">
@@ -142,5 +148,11 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.username').text(sessionStorage.getItem('_prenom'));
+        });
+    </script>
 </body>
 </html>
