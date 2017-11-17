@@ -23,9 +23,50 @@
         <li>Salade(600g)</li>
         <li>Chou rouge(1kg)</li>
     </ul>
-    <div class="distance">Les producteurs : </div>
+    <button class="btn btn-primary"><a href="#" class="white">Je vais chercher</a></button>
+    <button class="btn btn-primary">Je me fait livrer</button>
+    <div class="producteurs">Les producteurs : </div>
+    <div id="map"></div>
 </div>
 
+<script>
+    function initMap() {
+        var uluru = {lat: 48.82541500000001, lng:2.1305439999999862};
+        var iconWork = 'images/gardener.png';
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 10,
+            center: uluru
+        });
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map,
+            icon: 'images/warehouse.png'
+        });
+        var marker1 = new google.maps.Marker({
+            position: {lat: 48.86189, lng: 2.112527},
+            map: map,
+            icon: iconWork
+        });
+        var marker2 = new google.maps.Marker({
+            position: {lat: 48.8270042, lng: 2.1886944000000312},
+            map: map,
+            icon: iconWork
+        });
+        var marker3 = new google.maps.Marker({
+            position: {lat: 48.787899, lng: 2.190407999999934},
+            map: map,
+            icon: iconWork
+        });
+        var marker4 = new google.maps.Marker({
+            position: {lat: 48.856631, lng: 2.017616999999973},
+            map: map,
+            icon: iconWork
+        });
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLwFIPPFsPB6xpFqUf5cfx8yckTvTdpc4&callback=initMap">
+</script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
