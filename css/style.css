@@ -41,12 +41,13 @@ label{
 .card .product_image{
     width: 110px;
     height: 110px;
-    background-image: url("../images/panier-legumes.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     background-color: #FFF;
 }
+
+.card .product_image{background-image: url("../images/panier-legumes.jpg");}
 
 .card .title{
     font-size: 20px;
@@ -55,7 +56,7 @@ label{
 }
 
 .card ul{
-    margin-left: 10px;
+    margin-left: 30px;
 }
 
 .card .fa-angle-right{
@@ -75,4 +76,20 @@ label{
     padding: 2px 5px;
     font-size: 12px;
     color: #f06055;
+}
+
+.page_panier .title{
+    font-size: 25px;
+    text-align: center;
+    margin: 10px 0;
+    color: #ac1e47;
+}
+
+.page_panier .img_banner_container{
+    width: 100%;
+    height: 100px;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
