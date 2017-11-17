@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -20,13 +19,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Handi Hackthon</a>
+            <a class="navbar-brand logo" href="index.html"><img src="images/logouneligne.svg" alt="Logo"></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 2</a></li>
-                <li><a href="#">Item 3</a></li>
+                <li><a href="#" class="username"></a></li>
+                <li><a href="#">Mes commandes</a></li>
+                <li><a href="index.html">Les paniers</a></li>
+                <li><a href="#">Deconnexion</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div><!--/.container-fluid -->
@@ -91,6 +91,11 @@
             window.location.href='index.html';
         }
     }
+</script>
+<script>
+    $(document).ready(function() {
+        $('.username').text(sessionStorage.getItem('_prenom'));
+    });
 </script>
 </body>
 </html>

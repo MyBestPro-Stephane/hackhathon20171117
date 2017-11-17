@@ -83,7 +83,7 @@ label{
     color: #f06055;
 }
 
-.page_panier .title{
+.page_panier .title, .page_title{
     font-size: 25px;
     text-align: center;
     margin: 10px 0;
